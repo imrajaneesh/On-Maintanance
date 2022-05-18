@@ -19,7 +19,6 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
-   <!-- For Feedback-->
 
 </head>
 
@@ -173,7 +172,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form id="submit-form" action="https://script.google.com/macros/s/AKfycbwWIKsqE9kDJfM_03reXe8ckJCkRK3IC9cO1T9u/exec" method="post" class="php-email-form">
+            <form id="gform" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -229,12 +228,15 @@
   <!-- JS File -->
   <script src="assets/js/main.js"></script>
   
+  
+  <!-- For Feedback-->
+
    <script>
-        $("#submit-form").submit((e)=>{
+        $("#gform").submit((e)=>{
             e.preventDefault()
             $.ajax({
-                url:"",
-                data:$("#submit-form").serialize(),
+                url:"https://script.google.com/macros/s/AKfycbwWIKsqE9kDJfM_03reXe8ckJCkRK3IC9cO1T9u/exec",
+                data:$("#gform").serialize(),
                 method:"post",
                 success:function (response){
                     alert("Form submitted successfully")
