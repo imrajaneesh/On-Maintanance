@@ -5,6 +5,12 @@ body {
   background-size: cover;
   position: relative;
 }
+body .bgimage{
+    position: absolute;
+    top: 1420px;
+    left: 100px;
+    opacity: 0.1;
+}
 body::before {
   content: "";
   position: absolute;
@@ -67,11 +73,12 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
-  position: relative;
+ 
   width: 100%;
   padding: 10px 0;
   /* countdown */
